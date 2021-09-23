@@ -25,6 +25,7 @@ struct DataView: View {
             })
             Button(action: {
                 colour.toggle()
+                counter += 1
             }, label: {
                 Text("Background")
                     .font(.Gluten(style: "Bold", size: 40))

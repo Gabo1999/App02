@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32993EE826F971CF00E032DA /* App01_MiPerfilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32993EE726F971CF00E032DA /* App01_MiPerfilApp.swift */; };
+		32993EE826F971CF00E032DA /* App02_MiPerfilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32993EE726F971CF00E032DA /* App02_MiPerfilApp.swift */; };
 		32993EEA26F971CF00E032DA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32993EE926F971CF00E032DA /* ProfileView.swift */; };
 		32993EEC26F971D100E032DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32993EEB26F971D100E032DA /* Assets.xcassets */; };
 		32993EEF26F971D100E032DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32993EEE26F971D100E032DA /* Preview Assets.xcassets */; };
@@ -19,11 +19,12 @@
 		32993F0226F97C2800E032DA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32993F0126F97C2800E032DA /* Colors.xcassets */; };
 		FB283BA726FCCE6A00DB3DF3 /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB283BA626FCCE6A00DB3DF3 /* StateView.swift */; };
 		FB283BA926FCD5DA00DB3DF3 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB283BA826FCD5DA00DB3DF3 /* DataView.swift */; };
+		FBF1A13A26FCF250002A359F /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1A13926FCF250002A359F /* ProfileDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32993EE426F971CF00E032DA /* App02-MiPerfil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "App02-MiPerfil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		32993EE726F971CF00E032DA /* App01_MiPerfilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App01_MiPerfilApp.swift; sourceTree = "<group>"; };
+		32993EE726F971CF00E032DA /* App02_MiPerfilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App02_MiPerfilApp.swift; sourceTree = "<group>"; };
 		32993EE926F971CF00E032DA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		32993EEB26F971D100E032DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32993EEE26F971D100E032DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -36,6 +37,7 @@
 		32993F0126F97C2800E032DA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		FB283BA626FCCE6A00DB3DF3 /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		FB283BA826FCD5DA00DB3DF3 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		FBF1A13926FCF250002A359F /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				32993EF826F9773100E032DA /* Fonts */,
-				32993EE726F971CF00E032DA /* App01_MiPerfilApp.swift */,
+				32993EE726F971CF00E032DA /* App02_MiPerfilApp.swift */,
 				FB283BA626FCCE6A00DB3DF3 /* StateView.swift */,
 				FB283BA826FCD5DA00DB3DF3 /* DataView.swift */,
 				32993EE926F971CF00E032DA /* ProfileView.swift */,
@@ -78,6 +80,7 @@
 				32993EEB26F971D100E032DA /* Assets.xcassets */,
 				32993EF026F971D100E032DA /* Info.plist */,
 				32993EED26F971D100E032DA /* Preview Content */,
+				FBF1A13926FCF250002A359F /* ProfileDataView.swift */,
 			);
 			path = "App02-MiPerfil";
 			sourceTree = "<group>";
@@ -178,8 +181,9 @@
 				32993F0026F978F300E032DA /* Fonts.swift in Sources */,
 				32993EF726F9754300E032DA /* TextView.swift in Sources */,
 				FB283BA726FCCE6A00DB3DF3 /* StateView.swift in Sources */,
+				FBF1A13A26FCF250002A359F /* ProfileDataView.swift in Sources */,
 				32993EEA26F971CF00E032DA /* ProfileView.swift in Sources */,
-				32993EE826F971CF00E032DA /* App01_MiPerfilApp.swift in Sources */,
+				32993EE826F971CF00E032DA /* App02_MiPerfilApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
