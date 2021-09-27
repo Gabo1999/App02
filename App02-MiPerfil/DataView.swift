@@ -14,7 +14,7 @@ struct DataView: View {
     var body: some View {
         VStack {
             Text("Counter: \(counter)")
-                .font(.Gluten(style: "Bold", size: 40))
+                .font(.Roboto(style: "Bold", size: 40))
                 .padding(.bottom, 20)
             Button(action: {
                 counter += 1
@@ -28,7 +28,7 @@ struct DataView: View {
                 counter += 1
             }, label: {
                 Text("Background")
-                    .font(.Gluten(style: "Bold", size: 40))
+                    .font(.Roboto(style: "Bold", size: 40))
                     .foregroundColor(.white)
                     .padding()
                     .background(colour ? Color.purple : Color.blue)

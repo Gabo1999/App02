@@ -50,7 +50,7 @@ struct ProfileView: View {
                 HStack {
                     Image(systemName: "calendar")
                     Text("\(dateFormat.string(from: date))")
-                        .font(.Gluten(style: "Regular", size: 24))
+                        .font(.Roboto(style: "Regular", size: 24))
                         .foregroundColor(Color("Font"))
                         .padding()
                     Spacer()
@@ -60,7 +60,7 @@ struct ProfileView: View {
                     showData.toggle()
                 }, label: {
                     Text("Editar Datos")
-                        .font(.Gluten(style: "Bold", size: 40))
+                        .font(.Roboto(style: "Bold", size: 40))
                         .foregroundColor(.white)
                         .padding()
                         .background(Color.green)

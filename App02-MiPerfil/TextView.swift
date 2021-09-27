@@ -18,7 +18,7 @@ struct TextView: View {
         HStack {
             Image(systemName: image)
             Text(text)
-                .font(.Gluten(style: font, size: size))
+                .font(.Roboto(style: font, size: size))
                 .foregroundColor(Color("Font"))
                 .padding()
             Spacer()

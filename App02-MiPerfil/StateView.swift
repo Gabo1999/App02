@@ -18,7 +18,7 @@ struct StateView: View {
             colour ? Color.blue : Color.purple
             VStack {
                 Text("Counter: \(counter)")
-                    .font(.Gluten(style: "Bold", size: 40))
+                    .font(.Roboto(style: "Bold", size: 40))
                     .padding(.bottom, 20)
                 Button(action: {
                     counter += 1
@@ -32,7 +32,7 @@ struct StateView: View {
                     counter += 10
                 }, label: {
                     Text("Background")
-                        .font(.Gluten(style: "Bold", size: 40))
+                        .font(.Roboto(style: "Bold", size: 40))
                         .foregroundColor(.white)
                         .padding()
                         .background(colour ? Color.purple : Color.blue)
@@ -43,7 +43,7 @@ struct StateView: View {
                     showView.toggle()
                 }, label: {
                     Text("Open")
-                        .font(.Gluten(style: "Bold", size: 40))
+                        .font(.Roboto(style: "Bold", size: 40))
                         .foregroundColor(.white)
                         .padding()
                         .background(colour ? Color.purple : Color.blue)
