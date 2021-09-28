@@ -13,13 +13,14 @@ struct TextView: View {
     var image: String
     var font: String
     var size: CGFloat
+    var fontColor: Color
     
     var body: some View {
         HStack {
             Image(systemName: image)
             Text(text)
                 .font(.Roboto(style: font, size: size))
-                .foregroundColor(Color("Font"))
+                .foregroundColor(fontColor)
                 .padding()
             Spacer()
         }
@@ -29,6 +30,6 @@ struct TextView: View {
 
 struct TextView_Previews: PreviewProvider {
     static var previews: some View {
-        TextView(text: "David Cantú Delgado", image: "person.fill", font: "Regular", size: 28)
+        TextView(text: "David Cantú Delgado", image: "person.fill", font: "Regular", size: 28, fontColor: .black)
     }
 }

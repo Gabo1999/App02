@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
     @State var name: String = "David Josué Marcial Quero"
     @State var city: String = "Oaxaca"
     @State var email: String = "A00828702@itesm.mx"
@@ -15,6 +16,7 @@ struct ProfileView: View {
     @State var date: Date = Date()
     @State var showData: Bool = false
     @State var backgroundColor: Color = Color("Background")
+    @State var fontColor: Color = Color(.black)
     
     // Variable para darle formate a las variables tipo fecha
     var dateFormat: DateFormatter {
@@ -43,15 +45,15 @@ struct ProfileView: View {
                     )
                     .padding(.vertical,60)
                 
-                TextView(text: name, image: "person.fill", font: "Black", size:24)
-                TextView(text: city, image: "house.fill", font: "Regular", size:24)
-                TextView(text: email, image: "envelope.fill", font: "Regular", size:24)
-                TextView(text: id, image: "qrcode", font: "Regular", size:24)
+                TextView(text: name, image: "person.fill", font: "Black", size:24, fontColor: fontColor)
+                TextView(text: city, image: "house.fill", font: "Regular", size:24, fontColor: fontColor)
+                TextView(text: email, image: "envelope.fill", font: "Regular", size:24, fontColor: fontColor)
+                TextView(text: id, image: "qrcode", font: "Regular", size:24, fontColor: fontColor)
                 HStack {
                     Image(systemName: "calendar")
                     Text("\(dateFormat.string(from: date))")
                         .font(.Roboto(style: "Regular", size: 24))
-                        .foregroundColor(Color("Font"))
+                        .foregroundColor(fontColor)
                         .padding()
                     Spacer()
                 }
@@ -72,7 +74,7 @@ struct ProfileView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .sheet(isPresented: $showData) {
-            ProfileDataView(name: $name, date: $date, backgroundColor: $backgroundColor)
+            ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor)
         }
     }
 }
