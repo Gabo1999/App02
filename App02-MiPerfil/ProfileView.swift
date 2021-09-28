@@ -17,6 +17,7 @@ struct ProfileView: View {
     @State var showData: Bool = false
     @State var backgroundColor: Color = Color("Background")
     @State var fontColor: Color = Color(.black)
+    @State var imageColor: Color = Color("Title")
     
     // Variable para darle formate a las variables tipo fecha
     var dateFormat: DateFormatter {
@@ -41,7 +42,7 @@ struct ProfileView: View {
                     .overlay(
                         Circle()
                             .stroke(lineWidth: 6)
-                            .foregroundColor(Color("Title"))
+                            .foregroundColor(imageColor)
                     )
                     .padding(.vertical,60)
                 
@@ -74,7 +75,7 @@ struct ProfileView: View {
         }
         .edgesIgnoringSafeArea(.all)
         .sheet(isPresented: $showData) {
-            ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor)
+            ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor, imageColor: $imageColor)
         }
     }
 }

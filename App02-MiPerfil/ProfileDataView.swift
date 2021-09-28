@@ -16,6 +16,8 @@ struct ProfileDataView: View {
     @Binding var date: Date
     @Binding var backgroundColor: Color
     @Binding var fontColor: Color
+    @Binding var imageColor: Color
+    var profileBackgroundColor: Color = Color("ProfileBackground")
     
     var dateFormat: DateFormatter {
         let formatter = DateFormatter()
@@ -38,10 +40,29 @@ struct ProfileDataView: View {
                 Section(header: Text("APARIENCIA")) {
                     ColorPicker("Color del fondo", selection: $backgroundColor)
                     ColorPicker("Color de letra", selection: $fontColor)
+                    ColorPicker("Color de contorno imágen", selection: $imageColor)
                 }
             }
-            .navigationBarTitle("Configuración")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem (placement: .principal) {
+                    HStack {
+                        Image(systemName: "gearshape.fill")
+                        Text("Configuración").font(.headline)
+                    }
+                    .foregroundColor(.red)
+                }
+            }
+            .edgesIgnoringSafeArea(.all)
+            .background(profileBackgroundColor)
+            .onAppear {
+                UITableView.appearance().backgroundColor = .clear
+            }
+            .onDisappear {
+                UITableView.appearance().backgroundColor = .systemGroupedBackground
+            }
         }
+        .accentColor(.red)
     }
 }
 
@@ -54,8 +75,9 @@ struct ProfileDataView_Previews: PreviewProvider {
     @State static var id: String = "A00828702"
     @State static var backgroundColor: Color = Color("Background")
     @State static var fontColor: Color = Color(.black)
+    @State static var imageColor: Color = Color(.red)
     
     static var previews: some View {
-        ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor)
+        ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor, imageColor: $imageColor)
     }
 }
