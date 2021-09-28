@@ -15,6 +15,8 @@ struct ProfileView: View {
     @State var id: String = "A00828702"
     @State var date: Date = Date()
     @State var showData: Bool = false
+    @State var modalidad: String = "Remoto"
+    @State var activo: Bool = false
     @State var backgroundColor: Color = Color("Background")
     @State var fontColor: Color = Color(.black)
     @State var imageColor: Color = Color("Title")
@@ -44,12 +46,19 @@ struct ProfileView: View {
                             .stroke(lineWidth: 6)
                             .foregroundColor(imageColor)
                     )
-                    .padding(.vertical,60)
-                
+                    .padding(.vertical,20)
                 TextView(text: name, image: "person.fill", font: "Black", size:24, fontColor: fontColor)
                 TextView(text: city, image: "house.fill", font: "Regular", size:24, fontColor: fontColor)
                 TextView(text: email, image: "envelope.fill", font: "Regular", size:24, fontColor: fontColor)
                 TextView(text: id, image: "qrcode", font: "Regular", size:24, fontColor: fontColor)
+                TextView(text: modalidad, image: "rectangle.stack.person.crop.fill", font: "Regular", size:24, fontColor: fontColor)
+                if (activo) {
+                    TextView(text: "Estudiante Activo", image: "book.fill", font:"Regular", size: 24, fontColor: fontColor)
+                }
+                else {
+                    TextView(text: "Estudiante Inactivo", image: "book.fill", font:"Regular", size: 24, fontColor: fontColor)
+                }
+                
                 HStack {
                     Image(systemName: "calendar")
                     Text("\(dateFormat.string(from: date))")
@@ -69,13 +78,12 @@ struct ProfileView: View {
                         .background(Color.green)
                         .cornerRadius(20)
                 })
-                .padding(.top, 20)
-                Spacer()
+                .padding(.top, 10)
             }
         }
         .edgesIgnoringSafeArea(.all)
         .sheet(isPresented: $showData) {
-            ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor, imageColor: $imageColor)
+            ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor, imageColor: $imageColor, activo: $activo, modalidad: $modalidad)
         }
     }
 }

@@ -17,6 +17,9 @@ struct ProfileDataView: View {
     @Binding var backgroundColor: Color
     @Binding var fontColor: Color
     @Binding var imageColor: Color
+    @Binding var activo: Bool
+    @Binding var modalidad: String
+    let modalidades = ["Remoto", "Híbrido", "Presencial"]
     var profileBackgroundColor: Color = Color("ProfileBackground")
     
     var dateFormat: DateFormatter {
@@ -33,6 +36,14 @@ struct ProfileDataView: View {
                     TextField("Ciudad", text: $city)
                     TextField("Correo", text: $email)
                     TextField("ID", text: $id)
+                    Toggle(isOn: $activo) {
+                                        Text("Estudante Activo")
+                                    }
+                    Picker("Modalidad", selection: $modalidad) {
+                        ForEach(modalidades, id: \.self) {
+                            Text($0)
+                        }
+                    }
                     DatePicker(selection: $date, in: ...Date(), displayedComponents: .date) {
                         Text("\(dateFormat.string(from: date))")
                     }
@@ -76,8 +87,10 @@ struct ProfileDataView_Previews: PreviewProvider {
     @State static var backgroundColor: Color = Color("Background")
     @State static var fontColor: Color = Color(.black)
     @State static var imageColor: Color = Color(.red)
+    @State static var activo: Bool = false
+    @State static var modalidad: String = "Remoto"
     
     static var previews: some View {
-        ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor, imageColor: $imageColor)
+        ProfileDataView(name: $name, city: $city, email: $email, id: $id, date: $date, backgroundColor: $backgroundColor, fontColor: $fontColor, imageColor: $imageColor, activo: $activo, modalidad: $modalidad)
     }
 }
